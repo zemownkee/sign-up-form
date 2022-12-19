@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="page">
+        <!-- left side of page -->
         <div class="sidebar">
             <div class="logo-container">
                 <img src="img/odin-logo.png" alt="odin logo" class="logo"> 
@@ -18,14 +19,54 @@
             <div class="credit">
                 Photo by <a href="https://unsplash.com/@haliewestphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Halie West</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
             </div>
-       
-       
-       
-            <div class="content">
-            <div id="hero" class="section"></div>
-            <form action="">
-                <!-- form guts -->
-            </form>
+        </div>
+       <!-- right side of page -->
+        <div class="content">
+            <div class="hero">
+                <p>This is not a real web service. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint voluptate optio porro? Sequi, reiciendis ipsam. <br><br>
+                You know you want to.</p>
+            </div>
+            <div class="form-container">
+                <p>Let's do this!</p>
+                <form action="">
+                    <div class="form-elements">
+                        <div class="row">
+                            <div class="fields">
+                                <label for="firstname">First Name</label>
+                                <input type="text" name="firstname" id="firstname">
+                            </div>
+                            <div class="fields">
+                                <label for="lastname">Last Name</label>
+                                <input type="text" name="lastname" id="lastname">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="fields">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email">
+                            </div>
+                            <div class="fields">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" name="phone" id="phone">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="fields">
+                                <label for="password">Password</label>
+                                <input type="password" name="password" id="password">
+                            </div>
+                            <div class="fields">
+                                <label for="confirm">Confirm Password</label>
+                                <input type="password" name="confirm" id="confirm">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="login">
+                <button class="button" type="submit" id="submit">Create Account</button>
+                <p>Already have an account? <a href="">Log in</a></p>
+            </div>
         </div>
     </div>
 </body>
