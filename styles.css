@@ -87,7 +87,7 @@
 .form-container {
     flex: 1 1 30%;
     background-color: white;
-    padding: 20px;
+    padding: 20px 12% 20px 20px;
     overflow: visible;
     box-shadow: 0px 1px 3px var(--shadow-color);
     position: relative;
@@ -135,6 +135,15 @@
     transition: 0.2s;
 }
 
+.no-match::after {
+    content: "Passwords do not match.";
+    padding-left: 1ch;
+    color: var(--invalid-entry-border);
+    position: relative;
+    font-size: .8em;
+    /* display: block; */
+}
+
 .fields input:focus {
     border: 2px solid var(--focus-border-color);
     box-shadow: 1px 1px 3px var(--shadow-color);
@@ -159,6 +168,7 @@
     background-color: var(--invalid-entry-fill);
     border: 1px solid var(--invalid-entry-border);
 }
+
 
 
 #submit {

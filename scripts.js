@@ -5,7 +5,7 @@ fields.forEach((field) => field.addEventListener('blur', checkValid));
 
 function checkValid(event) {
     //handle password validation first
-    if(event.target.id == 'confirm') {
+    if(event.target.id == 'confirm' || event.target.id == 'password') {
         checkPasswordMatch();
     }
     else if(event.target.value != "" && event.target.validity.valid == true) {
@@ -39,12 +39,15 @@ function checkPasswordMatch() {
     let checkingPassword = document.getElementById('confirm').value;
     let passwordBox = document.getElementById('password');
     let verificationBox = document.getElementById('confirm');  
-    if(passwordToCheck === checkingPassword) {
-       setValid(passwordBox, verificationBox);
-    }
-    else setInvalid(passwordBox, verificationBox);
-}
-
-function passwordStrength() {
+    let passwordLabel = document.querySelector('label[for="password"]');
     
+    //check values entered against each other
+    if(passwordToCheck === checkingPassword) {
+    setValid(passwordBox, verificationBox);
+    passwordLabel.classList.remove('no-match');
+    }
+    else {
+        setInvalid(passwordBox, verificationBox);
+        passwordLabel.classList.add('no-match');
+    }
 }
