@@ -140,12 +140,12 @@
     box-shadow: 1px 1px 3px var(--shadow-color);
 }
 
-.touched:valid {
+.valid {
     background-color: var(--valid-entry-fill);
     border: 1px solid var(--valid-entry-border);
 }
 
-.touched:invalid {
+.invalid {
     background-color: var(--invalid-entry-fill);
     border: 1px solid var(--invalid-entry-border);
 }
