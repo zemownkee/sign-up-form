@@ -27,47 +27,48 @@
                 You know you want to.</p>
             </div>
             <div class="form-container">
-                <p>Let's do this!</p>
-                <form action="">
+                <p class="form-header">Let's do this!</p>
+                <form action="" id="signup">
                     <div class="form-elements">
                         <div class="row">
                             <div class="fields">
-                                <label for="firstname">First Name</label>
-                                <input type="text" name="firstname" id="firstname">
+                                <label for="firstname">First Name*</label>
+                                <input type="text" name="firstname" id="firstname" placeholder="Bob" mingitlength="2" required>
                             </div>
                             <div class="fields">
-                                <label for="lastname">Last Name</label>
-                                <input type="text" name="lastname" id="lastname">
+                                <label for="lastname">Last Name*</label>
+                                <input type="text" name="lastname" id="lastname" placeholder="Saget" minlength="2" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="fields">
-                                <label for="email">Email</label>
-                                <input type="email" name="email" id="email">
+                                <label for="email">Email*</label>
+                                <input type="email" name="email" id="email" placeholder="email@email.com" required>
                             </div>
                             <div class="fields">
                                 <label for="phone">Phone Number</label>
-                                <input type="tel" name="phone" id="phone">
+                                <input type="tel" name="phone" id="phone" placeholder="(123)-456-7890">
                             </div>
                         </div>
                         <div class="row">
                             <div class="fields">
-                                <label for="password">Password</label>
-                                <input type="password" name="password" id="password">
+                                <label for="password">Password*</label>
+                                <input type="password" name="password" id="password" placeholder="Select Password">
                             </div>
                             <div class="fields">
-                                <label for="confirm">Confirm Password</label>
-                                <input type="password" name="confirm" id="confirm">
+                                <label for="confirm">Confirm Password*</label>
+                                <input type="password" name="confirm" id="confirm" placeholder="Re-Enter Password">
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
             <div class="login">
-                <button class="button" type="submit" id="submit">Create Account</button>
+                <button class="button" type="submit" form="signup" id="submit">Create Account</button>
                 <p>Already have an account? <a href="">Log in</a></p>
             </div>
         </div>
     </div>
+<script src="scripts.js"></script>
 </body>
 </html>
