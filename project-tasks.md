@@ -13,9 +13,7 @@
 
 
 # Validation
-1. basic validation styles built
-2. password matching
-3. messages for errors
-4. tips on hover
-5. 
-
+<!-- 1. basic validation styles built -->
+<!-- 2. password matching -->
+<!-- 3. messages for errors -->
+<!-- 4. tips on hover -->

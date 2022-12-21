@@ -9,14 +9,14 @@
 :root {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     --sidebar-background-mask-color: rgba(0, 0, 0, 0.5);
-    --submit-button-color: rgb(70, 112, 50);
+    --submit-button-color: rgb(86, 28, 82);
     --valid-entry-border: rgb(70, 112, 50);
     --invalid-entry-border: rgb(210, 65, 65);
     --valid-entry-fill:  rgba(70, 112, 50, 0.25);
     --invalid-entry-fill: rgba(210, 65, 65, 0.25);
     --accent-background-color: rgb(246, 246, 248);
     --neutral-border-color: rgb(190, 188, 188);
-    --focus-border-color: rgb(21, 106, 5);
+    --focus-border-color: rgb(86, 28, 82);
     --shadow-color: rgba(0,0,0,0.6);
 }
 
@@ -32,11 +32,10 @@
     position: sticky;
     top: 0;
     left: 0;
-    background-image: url(img/background.jpeg);
+    background-image: url(img/background.prime.jpg);
     background-size: cover;
     display: flex;
     flex-direction: column;
-    
 }
 
 .logo-container {
@@ -46,6 +45,8 @@
     font-size: 6rem;
     background-color: var(--sidebar-background-mask-color);
     color: white;
+    text-shadow: 2px 2px rgb(95, 95, 95);
+    filter:brightness(0.85);
     align-items: center;
     justify-content: center;
     display: flex;
@@ -55,6 +56,7 @@
     width: 70px;
     height: auto;
     margin-right: 1rem;
+    filter: drop-shadow(2px 2px rgb(95, 95, 95));
 }
 
 .credit, .credit a{
@@ -81,7 +83,7 @@
     background-color: var(--accent-background-color);
     padding: 12% 20px 20px 20px;
     position: relative;
-    z-index: 2;
+    z-index: 0;
 }
 
 .form-container {
@@ -135,6 +137,14 @@
     transition: 0.2s;
 }
 
+.too-short::after {
+    content: "Password must be at least 8 characters long.";
+    padding-left: 1ch;
+    color: var(--invalid-entry-border);
+    position: relative;
+    font-size: .8em;
+}
+
 .no-match::after {
     content: "Passwords do not match.";
     padding-left: 1ch;
@@ -169,6 +179,13 @@
     border: 1px solid var(--invalid-entry-border);
 }
 
+.empty::after {
+    content: "Don't leave me blank!";
+    padding-left: 1ch;
+    color: var(--invalid-entry-border);
+    position: relative;
+    font-size: .8em;   
+}
 
 
 #submit {
